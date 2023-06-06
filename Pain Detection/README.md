@@ -1,4 +1,4 @@
-# csc2516-project
+# csc2516-project: Done With Collaborators: Zhimao Lin and Yasamin Zarghami
 
 The purpose of this project is to compare the following papers:
 
