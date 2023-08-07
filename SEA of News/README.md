@@ -50,9 +50,34 @@ In conclusion, with the constraints shown, the BART model seems to be the best o
 
 Figure 6: Sample summary of what the BART model and the pipeline is capable of.
 
-It is my hope that the entire pipeline can be of use for other people. The code itself is very simple to use, although to repurpose it for other countries, one needs to write their own web scraping scripts. 
+It is my hope that the entire pipeline can be of use for other people. The code itself is very simple to use, although to repurpose it for other countries, one needs to write their own web scraping scripts.
+
+## Modification Tips
+
+For those who are not familiar with Prefect, please look at this video: https://www.youtube.com/watch?v=D5DhwVNHWeU&t=873s 
+
+For those who want to modify the script to obtain news from other news outlets:
+ - Copy the entire directory to your local computer.
+ - Copy one of the scrapers inside the scraper file in NewsScraperDatabase and change the name of the python file.
+ - Replace the url in self.base_url and change the class name to the news outlet/
+ - Rewrite the collect_data method using web scraping technologies: https://www.youtube.com/watch?v=gRLHr664tXA&t=632s (tutorial for BeautifulSoup)
+ - Go to etl.py and import the file you just edited.
+ - Go to the extract function and copy the format as written by the extract functions.
+ - Deploy using Prefect.
+
+Notes: Sometimes the data extraction can return an error because of typos in the website for the date process (eg: AntaraNews wrote 3 Augu 2023 instead of AntaraNews' standard Date Full Month Name Year). I am working on finding ways to circumvent this.
+
+## Documentation
+Note that the most methods found in the database and scraper classes are used for debugging purposes. The important ones are listed here:
+- (scraper.py) collect_data: Populates the database by going to the news outlet's website and then obtaining the necessary information.
+- (etl.py) complete_pipeline: Goes through the entire ETL pipeline and summarization process.
+- (etl.py) summarize: Summarization ETL process.
+- (etl.py) extract: Goes through the extraction phase of the ETL pipeline.
+- (etl.py) load: Loads the extracted headlines, etc. to a sqlite database
+- (etl.py) transform: Divides the data into 'news' and 'source' tables and prepares them for loading
 
 Further improvements can be made on the way the database is created: i.e scraping the entire website for the available news from the first inception of the news outlet, although this will probably overload the servers.
+
 
 ## Improvements and Changelog
 
