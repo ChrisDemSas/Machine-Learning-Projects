@@ -29,7 +29,7 @@ The schema of the database is shown:
 Figure 2: Figure showing the database schema of the news summarization project.
 
 
-Then, the article content is summarized using a Large Language Model (BART/Pegasus/T5) to produce the summary and the results put inside a PDF document. Finally, the model is deployed using Prefect and set to run every day.
+Then, the article content is summarized using a Large Language Model (BART/Pegasus/T5) to produce the summary and the results put inside a PDF document. Finally, the model is deployed using Prefect and set to run every day. The entire pipeline creates two files, 'news_database.db' and 'summary.pdf' where the information about the news is stored and the summaries generated are stored respectively.
 
 ## Results for Summary Model
 The results found that out of the three language models, the BART model performed the best (results can be viewed under 'results' folder under 'test' and 'NewsScraperSummarizer'. This is because the T5 model, while was quite successful, was quite hard to fine-tune for other users if they wanted a longer summary because it simply generated empty spaces, and so was rejected. The BART and Pegasus models, were both quite well done, but BART performed better when it came to time constraints. The results are shown here:
