@@ -10,7 +10,8 @@ When I designed this project, I wanted the project to have the following constra
   - Very short summaries for each news headline (a few sentences), so that the geopolitical analyst can quickly sift through the information, ignore unnecessary information       and get a gist of the affairs of the country. 
   - Storing the news headlines in a sqlite3 database because the dataset is relatively small and will probably not grow exponentially, since I am not focusing on global news.
   - Lowest run time in the computer because this will be run on my local computer, daily.
-  
+
+With the following constraints in mind, the testing of the Large Language Models (T5/Pegasus/BART) can begin.
 
 ## Methodology
 The method is to employ the Extract-Transform-Load pipeline in order to extract information from the news outlet's website. The title, date, url, country source, news outlet and country (either ASEAN or Singapore/Indonesia/Myanamr) where the news is concerned. It should also be mentioned, that the author's name was not collected because there are some news outlets which do not contain the author's name for some articles and I wished to be consistent, instead of writing the news outlet twice or having a lot of missing data. The article's content was also scraped using web scraping technologies, though not stored in a database.
@@ -30,8 +31,17 @@ Figure 2: Figure showing the database schema of the news summarization project.
 
 Then, the article content is summarized using a Large Language Model (BART/Pegasus/T5) to produce the summary and the results put inside a PDF document.
 
-## Results
-The results found that 
+## Results for Summary Model
+The results found that out of the three language models, the BART model performed the best (results can be viewed under 'results' folder under 'test' and 'NewsScraperSummarizer'. This is because the T5 model, while was quite successful, was quite hard to fine-tune for other users if they wanted a longer summary because it simply generated empty spaces, and so was rejected. The BART and Pegasus models, were both quite well done, but BART performed better when it came to time constraints. The results are shown here:
+
+<img width="888" alt="Screenshot 2023-08-07 at 2 26 42 PM" src="https://github.com/ChrisDemSas/Machine-Learning-Projects/assets/93426725/d5f96fd2-7141-47d3-9368-d4eff30b11ba">
+
+Figure 3: Graph showing the time taken for execution with varying token lengths.
+
+<img width="894" alt="Screenshot 2023-08-07 at 2 29 24 PM" src="https://github.com/ChrisDemSas/Machine-Learning-Projects/assets/93426725/56e5f53d-3ced-4ebc-b813-e6391533b5ec">
+
+Figure 3: Graph showing the Rouge Score with varying token lengths.
+
 
 
 ## Conclusion
