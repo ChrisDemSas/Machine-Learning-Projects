@@ -14,10 +14,13 @@ The method is to employ the Extract-Transform-Load pipeline in order to extract 
 
 Figure 1: Figure showing the ETL pipeline and the summarization process.
 
-
 The schema of the database is shown:
+
+
 <img width="233" alt="Screenshot 2023-08-07 at 1 52 25 PM" src="https://github.com/ChrisDemSas/Machine-Learning-Projects/assets/93426725/9db40df6-ca00-46d0-a57e-f594f6e7b75d">
+
 Figure 2: Figure showing the database schema of the news summarization project.
+
 
 Then, 
 
