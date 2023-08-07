@@ -29,7 +29,7 @@ The schema of the database is shown:
 Figure 2: Figure showing the database schema of the news summarization project.
 
 
-Then, the article content is summarized using a Large Language Model (BART/Pegasus/T5) to produce the summary and the results put inside a PDF document.
+Then, the article content is summarized using a Large Language Model (BART/Pegasus/T5) to produce the summary and the results put inside a PDF document. Finally, the model is deployed using Prefect and set to run every day.
 
 ## Results for Summary Model
 The results found that out of the three language models, the BART model performed the best (results can be viewed under 'results' folder under 'test' and 'NewsScraperSummarizer'. This is because the T5 model, while was quite successful, was quite hard to fine-tune for other users if they wanted a longer summary because it simply generated empty spaces, and so was rejected. The BART and Pegasus models, were both quite well done, but BART performed better when it came to time constraints. The results are shown here:
@@ -40,8 +40,29 @@ Figure 3: Graph showing the time taken for execution with varying token lengths.
 
 <img width="894" alt="Screenshot 2023-08-07 at 2 29 24 PM" src="https://github.com/ChrisDemSas/Machine-Learning-Projects/assets/93426725/56e5f53d-3ced-4ebc-b813-e6391533b5ec">
 
-Figure 3: Graph showing the Rouge Score with varying token lengths.
-
+Figure 4: Graph showing the Rouge Score with varying token lengths.
 
 
 ## Conclusion
+
+In conclusion, with the constraints shown, the BART model seems to be the best one for the purpose of summarization and for this model. This is because in Figure 4, the ROUGE scores seem to be close to the Pegasus model and that the BART model runs significantly faster than the Pegasus model as shown in Figure 3. Thus, the BART model was chosen for the purpose, whereby the final results look like this:
+<img width="961" alt="Screenshot 2023-08-07 at 2 34 19 PM" src="https://github.com/ChrisDemSas/Machine-Learning-Projects/assets/93426725/6a0428f2-642f-4d6c-8f9b-7ad5765d3b09">
+
+Figure 6: Sample summary of what the BART model and the pipeline is capable of.
+
+It is my hope that the entire pipeline can be of use for other people. The code itself is very simple to use, although to repurpose it for other countries, one needs to write their own web scraping scripts. 
+
+Further improvements can be made on the way the database is created: i.e scraping the entire website for the available news from the first inception of the news outlet, although this will probably overload the servers.
+
+## Improvements and Changelog
+
+7th August 2023: Added Vietnamese and Thai news outlets (Tuo Tre News and ThaiPBSWorld respectively).
+
+
+
+
+
+
+
+
+
