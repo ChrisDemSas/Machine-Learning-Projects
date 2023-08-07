@@ -6,6 +6,12 @@ SEA of News aims to quickly gather from popular news outlets in Singapore, Myanm
 ## Problem Statement and Introduction
 The geopolitical landscape during the year 2023, has seen tremendous developments and keeping up with current events is difficult due to numerous sources providing different versions of events. For geopolitical analysts who are interested in the geopolitics between between countries and domestic affairs, this is an arduos task because the international and domestic affairs intermingle and the main political issues are often obscured with irrelevant headlines. In order to alleviate this problem, a data science and machine learning approach was proposed to lighten the burden through web scraping and summarizing news content. To this end, a large-language model (LLM) is needed to quickly summarize the articles and web scraping will be employed to collect the relevant data. Popular Southeast Asian news outlets such as Channel News Asia will be scraped for news because these news outlets are where most people obtain their news from.
 
+When I designed this project, I wanted the project to have the following constraints, with the following reasons:
+  - Very short summaries for each news headline (a few sentences), so that the geopolitical analyst can quickly sift through the information, ignore unnecessary information       and get a gist of the affairs of the country. 
+  - Storing the news headlines in a sqlite3 database because the dataset is relatively small and will probably not grow exponentially, since I am not focusing on global news.
+  - Lowest run time in the computer because this will be run on my local computer, daily.
+  
+
 ## Methodology
 The method is to employ the Extract-Transform-Load pipeline in order to extract information from the news outlet's website. The title, date, url, country source, news outlet and country (either ASEAN or Singapore/Indonesia/Myanamr) where the news is concerned. It should also be mentioned, that the author's name was not collected because there are some news outlets which do not contain the author's name for some articles and I wished to be consistent, instead of writing the news outlet twice or having a lot of missing data. The article's content was also scraped using web scraping technologies, though not stored in a database.
 
@@ -22,10 +28,10 @@ The schema of the database is shown:
 Figure 2: Figure showing the database schema of the news summarization project.
 
 
-Then, the article content is summarized using a Large Language Model (BART) to produce a summary and finally, a ROUGE score is calculated to determine the quality of news summarization. 
+Then, the article content is summarized using a Large Language Model (BART/Pegasus/T5) to produce the summary and the results put inside a PDF document.
 
 ## Results
-
+The results found that 
 
 
 ## Conclusion
