@@ -2,7 +2,7 @@
 
 Hello there! You have stumbled upon my machine learning project archive, where I upload all of the machine learning projects that I have worked on. There is material ranging from academic projects to mini machine learning exercises to project showcases. Here is a brief rundown:
 
-# Project Showcases
+# Project Showcase
 This section is where my most proud machine learning achievements are displayed, where my current knowledge of data science and data engineering is displayed. Here are the projects which I have displayed:
 
 ### SEA of News 
