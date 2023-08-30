@@ -2,7 +2,7 @@
 
 Hello there! You have stumbled upon my machine learning project archive, where I upload all of the machine learning projects that I have worked on. There is material ranging from academic projects to mini machine learning exercises to project showcases. 
 
-* Table of Contents
+# Table of Contents
 
 - [Project Showcase](#Project-Showcase)
 
