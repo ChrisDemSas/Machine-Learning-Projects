@@ -3,6 +3,17 @@
 ## Quick Summary
 SEA of News aims to quickly gather from popular news outlets in Singapore, Myanmar and Indonesia in order to expedite the research process for those who want to monitor the geopolitics of these countries. Initially, the aim was to simply summarize the current day's news in order to give a brief overview of the daily events occuring in these countries, but eventually, I decided to store the headlines and other key information (dates, country source etc.) in an sqlite database and let it grow over time. The method used was to use Extract-Transform-Load for the database part, using the web scraping to scrape headlines from the outlets and then using the pipeline to load the data into a sqlite database. Then, the url was then used again to scrape the article content of the headlines, while carefully ignoring the articles not written on the current day. Finally, the entire project was deployed using Prefect and then automatically run daily so that a news summary can be generated daily. This entire project managed to expedite the research of geopolitical developments by at least 10% and greatly reduced the burden of going to individual news outlets and sifting through irrelavant news. 
 
+# Table of Contents
+
+- [Problem Statment and Introduction](#Problem-Statement-and-Introduction)
+- [Methodology](#Methodology)
+- [Results for Summary Model](#Results-for-Summary-Model)
+- [Conclusion](#Conclusion)
+- [Modification Tips](#Modification-Tips)
+- [Documentation](#Documentation)
+- [Improvements and Changelog](#Improvements-and-Changelog)
+- [Disclaimer](#Disclaimer)
+
 ## Problem Statement and Introduction
 The geopolitical landscape during the year 2023, has seen tremendous developments and keeping up with current events is difficult due to numerous sources providing different versions of events. For geopolitical analysts who are interested in the geopolitics between between countries and domestic affairs, this is an arduos task because the international and domestic affairs intermingle and the main political issues are often obscured with irrelevant headlines. In order to alleviate this problem, a data science and machine learning approach was proposed to lighten the burden through web scraping and summarizing news content. To this end, a large-language model (LLM) is needed to quickly summarize the articles and web scraping will be employed to collect the relevant data. Popular Southeast Asian news outlets such as Channel News Asia will be scraped for news because these news outlets are where most people obtain their news from.
 
@@ -82,6 +93,9 @@ Further improvements can be made on the way the database is created: i.e scrapin
 ## Improvements and Changelog
 
 7th August 2023: Added Vietnamese and Thai news outlets (Tuo Tre News and ThaiPBSWorld respectively).
+
+## Disclaimer
+I am not responsible for any legal trouble that people may get into by using these tools. When you use this summarization tool, be sure to check the websites' robots.txt to check if data scraping is feasible.
 
 
 
