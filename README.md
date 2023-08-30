@@ -5,6 +5,13 @@ Hello there! You have stumbled upon my machine learning project archive, where I
 # Table of Contents
 
 - [Project Showcase](#Project-Showcase)
+  - [Sea of News](#SEA-of-News)
+- [Academic Projects](#Academic-Projects)
+  - [Pain Detection](#Pain-Detection)
+  - [Singapore Weather Prediction](#Singapore-Weather-Prediction)
+- [Machine Learning Projects](#Machine-Learning-Projects)
+  - [Singapore Energy Usage](#Singapore-Energy-Usage)
+
 
 # Project Showcase
 This section is where my best machine learning projects are displayed. In this section, you will find entire data pipelines which culminate to a final machine learning model. Here are the projects which I have displayed:
