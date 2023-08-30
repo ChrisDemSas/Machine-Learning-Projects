@@ -4,7 +4,7 @@ Hello there! You have stumbled upon my machine learning project archive, where I
 
 **Contents**
 
-- [Project Showcase](#Project Showcase)
+- [Project Showcase](#Project-Showcase)
 
 # Project Showcase
 This section is where my best machine learning projects are displayed. In this section, you will find entire data pipelines which culminate to a final machine learning model. Here are the projects which I have displayed:
