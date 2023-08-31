@@ -11,6 +11,7 @@ Hello there! You have stumbled upon my machine learning project archive, where I
   - [Singapore Weather Prediction](#Singapore-Weather-Prediction)
 - [Machine Learning Projects](#Machine-Learning-Projects)
   - [Singapore Energy Usage](#Singapore-Energy-Usage)
+  - [Rohingya Refugee Crisis](#Rohingya-Refugee-Crisis)
 
 
 # Project Showcase
@@ -33,3 +34,6 @@ This section is where my machine learning exercises are displayed, usually using
 
 ### Singapore Energy Usage
 Used and compared two regression models, Ridge and Simple linear regression in order to predict and find out the factors that contribute to energy usage in buildings in Singapore. The Ridge model differs from the Simple linear regression model because of the addition of a penalty term, which penalizes high numbers of parameters, keeping the model more simple. The results found that the Ridge Model was preferable because I wanted to keep explanations simple.
+
+### Rohingya Refugee Crisis
+The Rohingya are an Muslim ethnic group located in the border between Bangladesh and Myanmar. In recent times, they have been the target of anti-Muslim terror groups which led to an exodus into Bangladesh. In this project, I aim to classify the confidence levels of Rohingya refugees as to find the factors which influence refugee confidence in their temporary homes. I hope that these results will help inform governmental institutions on how best to manage refugees. The method was to use decision trees, XGBoost and random forests, after exploratory data analysis, in order to start the classification. The final result found that XGBoost gave the best accuracy result at around 69% with the others slightly below that. Finally, it was found that the factors which contributed the most to managing refugee confidence are income satisfaction, access to help, religious facilities, camp conditions and if the government in Myanmar will recognize Rohingya rights.
